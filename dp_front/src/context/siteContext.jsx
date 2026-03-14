@@ -24,7 +24,7 @@ export const SiteContextProvider = (props) => {
         console.log("called logout");
         clearToken();
         setUid('');
-        window.location.replace('https://your-frontend-url.onrender.com/');
+        window.location.replace('https://disease-prediction-frontend-ejut.onrender.com/');
     };
 
     useEffect(() => {
