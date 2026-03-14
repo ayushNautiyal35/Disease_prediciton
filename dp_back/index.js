@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
@@ -10,9 +11,9 @@ const app = express()
 
 
 mongoose
-    .connect('mongodb://0.0.0.0:27017/DisPred')
+    .connect(process.env.MONGO_URI)
     .then(()=>{ console.log('Connected to MongoDB...'); })
-    .catch((err) => console.error("Could not connect to mongoDB...") );
+    .catch((err) => console.error("Could not connect to mongoDB...", err) );
 
 app.use(cors())
 app.use(express.json())
@@ -22,7 +23,7 @@ app.use('/api/doctor', doctor);
 app.use('/api/reviews', review);
 app.use('/api/booking', booking);
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.listen(port, ()=>{
     console.log(`server is listening on port ${port}...`);
