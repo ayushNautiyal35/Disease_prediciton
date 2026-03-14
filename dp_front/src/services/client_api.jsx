@@ -7,5 +7,5 @@ import axios from "axios"
 // }
 // axios.defaults.headers.common = {'Authorization': `bearer ${getToken()}`}
 export default axios.create({
-    baseURL: 'http://localhost:3000/api'
+    baseURL: 'https://disease-prediction-backend-ex9e.onrender.com/api'
 });
