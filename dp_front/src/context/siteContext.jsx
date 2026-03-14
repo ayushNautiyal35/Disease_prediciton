@@ -24,7 +24,7 @@ export const SiteContextProvider = (props) => {
         console.log("called logout");
         clearToken();
         setUid('');
-        window.location.replace('http://localhost:5173/');
+        window.location.replace('https://your-frontend-url.onrender.com/');
     };
 
     useEffect(() => {
