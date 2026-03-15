@@ -57,7 +57,7 @@ const Login = () => {
           setUid(res.data.uid);
           saveToken({"uid": res.data.uid, "Token":res.data.token})
           await delay(100);
-          window.location.replace('http://localhost:5173/')
+          window.location.replace('https://disease-prediction-frontend-ejut.onrender.com/')
         }).catch((err)=>{
           toast.warning('Invalid credentials',err.response.data);
         })
