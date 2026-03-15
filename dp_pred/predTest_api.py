@@ -1367,8 +1367,8 @@ class model_input(BaseModel):
 
 dbfile = open('symptoms_dictionary', 'rb')    
 db = pickle.load(dbfile)
-model = pickle.load(open('model.sav', 'rb'))
-# model = pickle.load(open('model_lr.sav', 'rb'))
+#model = pickle.load(open('model.sav', 'rb'))
+model = pickle.load(open('model_lr.sav', 'rb'))
 
 @app.post('/dp_pred')
 def dp_predictor(input_parameters:model_input):
